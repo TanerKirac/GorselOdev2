@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GorselOdev.Haberler"
+             Title="Haberler">
+    <Grid RowDefinitions="Auto,*" RowSpacing="10" >
+        <CollectionView Grid.Row="0">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{Binding Baslik}" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <CollectionView Grid.Row="1">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="{Binding Baslik}" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

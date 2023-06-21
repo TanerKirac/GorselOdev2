@@ -1,0 +1,24 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GorselOdev.HavaDurumu"
+             Title="HavaDurumu">
+    <StackLayout>
+        <Button Text="Şehir Ekle" HorizontalOptions="End" Margin="10" Clicked="AddButton_Clicked" />
+        <Label x:Name="CityLabel" Text="Şehir ismi giriniz:" IsVisible="False" Margin="10" />
+        <Entry x:Name="CityEntry" IsVisible="False" Margin="10" />
+        <Button x:Name="AddCityButton" Text="Ekle" IsVisible="False" Margin="10" Clicked="AddCityButton_Clicked" />
+        <ListView x:Name="WeatherListView" Margin="10">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Date}" FontSize="16" HorizontalOptions="StartAndExpand" />
+                            <Label Text="{Binding Temperature}" FontSize="16" HorizontalOptions="End" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Label x:Name="CityListLabel" Margin="10" />
+    </StackLayout>
+</ContentPage>
